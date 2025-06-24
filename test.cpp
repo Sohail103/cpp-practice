@@ -1,7 +1,6 @@
 #include <iostream>
 
-int main()
-{
+int main() {
     std::cout << "Number1" << std::endl;
     std::cout << "Number2\n";
     std::cout << "Number3" << std::endl;
@@ -23,7 +22,8 @@ int main()
 
     std::cout << "Enter a line of text: ";
     std::string line;
-    std::cin >> std::ws;                // whitespace delimited std::cin reads leave whitespaces
-    std::getline(std::cin, line);       // in the input stream. using std::ws to clean first
+    std::cin >> std::ws;          // whitespace delimited std::cin reads leave whitespaces
+    std::getline(std::cin, line); // in the input stream. using std::ws to clean first
+
     std::cout << "Entered line: " << line << std::endl;
 }
