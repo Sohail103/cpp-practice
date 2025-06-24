@@ -14,7 +14,7 @@
                 "-Wconversion",
                 "-Wsign-conversion",
                 "-o",
-                "${fileDirname}/CompiledBinaries/${fileBasenameNoExtension}"
+                "${fileDirname}/bin"
             ],
             "options": {
                 "cwd": "${fileDirname}",
