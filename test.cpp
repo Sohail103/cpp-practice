@@ -16,4 +16,8 @@ int main()
     std::cout << "Enter age: ";
     std::cin >> age;
     std::cout << "Age: " << age << std::endl;
+
+    std::cout << "Enter name and age in one line: ";
+    std::cin >> name >> age;
+    std::cout << "Name: " << name << ", Age: " << age << std::endl;
 }
