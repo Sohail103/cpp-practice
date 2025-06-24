@@ -23,6 +23,7 @@ int main()
 
     std::cout << "Enter a line of text: ";
     std::string line;
-    std::getline(std::cin, line);
+    std::cin >> std::ws;                // whitespace delimited std::cin reads leave whitespaces
+    std::getline(std::cin, line);       // in the input stream. using std::ws to clean first
     std::cout << "Entered line: " << line << std::endl;
 }
