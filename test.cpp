@@ -1,4 +1,6 @@
-#include <iostream>
+#include <iostream> // std::string works without including this because g++'s
+#include <string>   // implementation for iostream automatically includes a part
+                    // of the string library - not in the c++ standard - compiler specific
 
 int main() {
     std::cout << "Number1" << std::endl;
