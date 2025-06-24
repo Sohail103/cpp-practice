@@ -7,4 +7,9 @@ int main()
     std::cout << "Number3" << std::endl;
     std::cerr << "Errors" << std::endl;
     std::cout << "Line after error" << std::endl;
+
+    std::string name;
+    int age;
+    std::cout << "Enter name: ";
+    std::cin >> name;
 }
