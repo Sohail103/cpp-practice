@@ -20,4 +20,9 @@ int main()
     std::cout << "Enter name and age in one line: ";
     std::cin >> name >> age;
     std::cout << "Name: " << name << ", Age: " << age << std::endl;
+
+    std::cout << "Enter a line of text: ";
+    std::string line;
+    std::getline(std::cin, line);
+    std::cout << "Entered line: " << line << std::endl;
 }
