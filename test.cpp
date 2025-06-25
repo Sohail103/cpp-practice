@@ -81,4 +81,11 @@ int main() {
     char ch1{'a'};
     int ch1num{static_cast<int>(ch1)};
     std::cout << ch1 << ": " << ch1num << std::endl;
+
+    auto var{13.0};
+    double vard{13.0};
+    std::cout << "Auto typed variable: " << var << "\n";
+    std::cout << "Double typed variable: " << vard << "\n";
+    std::cout << "Sizes of auto typed double and double: " << sizeof(var) << " " << sizeof(vard)
+              << "\n";
 }
