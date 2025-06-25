@@ -47,4 +47,10 @@ int main() {
     std::cout << "Space occupied by bool: " << sizeof(bool) << std::endl;
     std::cout << "Space occupied by short and long int: " << sizeof(unsigned short int) << " "
               << sizeof(long int) << std::endl;
+    std::cout << "Space occupied by long long: " << sizeof(long long int) << std::endl;
+
+    // On 64 bit linux systems, long long is the same size (8 bytes) as long
+    // but on windows long is 4 bytes and long long is 8 bytes
+    // for cross platform code, long long is the safest bet as that is guaranteed to be 8 bytes
+    // size of long has to be atleast 4 bytes but in 64 bit linux it is 8 bytes
 }
