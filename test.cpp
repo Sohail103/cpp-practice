@@ -45,6 +45,6 @@ int main() {
     std::cout << "Space occupied by integers: " << sizeof(num5) << std::endl;
     */
     std::cout << "Space occupied by bool: " << sizeof(bool) << std::endl;
-    std::cout << "Space occupied by short and long int: " << sizeof(short int) << " "
+    std::cout << "Space occupied by short and long int: " << sizeof(unsigned short int) << " "
               << sizeof(long int) << std::endl;
 }
