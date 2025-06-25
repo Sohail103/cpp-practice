@@ -2,6 +2,8 @@
 #include <string>   // implementation for iostream automatically includes a part
                     // of the string library - not in the c++ standard - compiler specific
 
+#include <iomanip> // lets you set the precision of floating point numbers
+
 int main() {
     /*
     std::cout << "Number1" << std::endl;
@@ -65,4 +67,8 @@ int main() {
                             // will raise warning if divided by 0
                             // will raise error if first number is an integer (1)
                             // subtracting inf - inf gives nan
+
+    float number1{1.082328293f};
+    std::setprecision(20);
+    std::cout << "Floating point number: " << number1 << std::endl;
 }
