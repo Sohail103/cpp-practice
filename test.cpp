@@ -53,6 +53,9 @@ int main() {
     // but on windows long is 4 bytes and long long is 8 bytes
     // for cross platform code, long long is the safest bet as that is guaranteed to be 8 bytes
     // size of long has to be atleast 4 bytes but in 64 bit linux it is 8 bytes
+    // suffix long double numbers during initialization with L
+    // suffix float numbers with f during initialization
+    // if correct suffix isnt used - type mismatch - lost data
 
     std::cout << "Size of double and long double: " << sizeof(double) << " " << sizeof(long double)
               << std::endl;
