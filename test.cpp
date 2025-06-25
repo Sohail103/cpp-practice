@@ -40,5 +40,7 @@ int main() {
                  // casting
     int num6(5); // functional variable initialization - implicitly typecasts from float to int
 
-    std::cout << num5 << " " << num6;
+    std::cout << num5 << " " << num6 << std::endl;
+    std::cout << "Space occupied by integers: " << sizeof(num5) << std::endl;
+    std::cout << "Space occupied by bool: " << sizeof(bool) << std::endl;
 }
