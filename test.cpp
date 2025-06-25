@@ -45,7 +45,7 @@ int main() {
 
     std::cout << num5 << " " << num6 << std::endl;
     std::cout << "Space occupied by integers: " << sizeof(num5) << std::endl;
-    */
+
     std::cout << "Space occupied by bool: " << sizeof(bool) << std::endl;
     std::cout << "Space occupied by short and long int: " << sizeof(unsigned short int) << " "
               << sizeof(long int) << std::endl;
@@ -68,7 +68,13 @@ int main() {
                             // will raise error if first number is an integer (1)
                             // subtracting inf - inf gives nan
 
-    float number1{1.082328293f};
-    std::setprecision(20);
+    float number1{1.082328293f}; // precision for float: 7, double: 15
+    std::setprecision(20);       // control precision from std::cout
     std::cout << "Floating point number: " << number1 << std::endl;
+    */
+
+    bool boo1{true};
+    std::cout << boo1 << std::endl; // displays output in cout as 1/0 by default
+    std::cout << std::boolalpha;    // forces output to format booleans as true/false
+    std::cout << boo1 << std::endl;
 }
