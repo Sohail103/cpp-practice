@@ -77,4 +77,8 @@ int main() {
     std::cout << boo1 << std::endl; // displays output in cout as 1/0 by default
     std::cout << std::boolalpha;    // forces output to format booleans as true/false
     std::cout << boo1 << std::endl;
+
+    char ch1{'a'};
+    int ch1num{static_cast<int>(ch1)};
+    std::cout << ch1 << ": " << ch1num << std::endl;
 }
