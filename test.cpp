@@ -36,8 +36,9 @@ int main() {
 
     std::cout << "Numbers are: " << num1 << " " << num2 << " " << num3 << " " << num4 << std::endl;
 
-    int num5{};  // initializes to 0 by default
-    int num6(5); // functional variable initialization
+    int num5{};  // initializes to 0 by default - raises error or warning instead of implicit type
+                 // casting
+    int num6(5); // functional variable initialization - implicitly typecasts from float to int
 
     std::cout << num5 << " " << num6;
 }
