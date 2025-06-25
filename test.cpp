@@ -29,10 +29,15 @@ int main() {
 
     std::cout << "Entered line: " << line << std::endl;
 
-    int num1 = 15;
+    int num1 = 15; // initializes to garbage value if you do int num;
     int num2 = 017;
     int num3 = 0xF;
     int num4 = 0b1111;
 
     std::cout << "Numbers are: " << num1 << " " << num2 << " " << num3 << " " << num4 << std::endl;
+
+    int num5{};  // initializes to 0 by default
+    int num6(5); // functional variable initialization
+
+    std::cout << num5 << " " << num6;
 }
