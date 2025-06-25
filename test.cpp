@@ -56,8 +56,10 @@ int main() {
 
     std::cout << "Size of double and long double: " << sizeof(double) << " " << sizeof(long double)
               << std::endl;
-    std::cout << (1.0 / 0.0f) << std::endl; // can divide float by 0 to get inf
-                                            // compiler wont raise warning if divided by 0.0f
-                                            // will raise warning if divided by 0
-                                            // will raise error if first number is an integer (1)
+    std::cout << (1.0 / 0.0f - 1.0 / 0.0f)
+              << std::endl; // can divide float by 0 to get inf
+                            // compiler wont raise warning if divided by 0.0f
+                            // will raise warning if divided by 0
+                            // will raise error if first number is an integer (1)
+                            // subtracting inf - inf gives nan
 }
