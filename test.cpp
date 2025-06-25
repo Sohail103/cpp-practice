@@ -28,4 +28,11 @@ int main() {
     std::getline(std::cin, line); // in the input stream. using std::ws to clean first
 
     std::cout << "Entered line: " << line << std::endl;
+
+    int num1 = 15;
+    int num2 = 017;
+    int num3 = 0xF;
+    int num4 = 0b1111;
+
+    std::cout << "Numbers are: " << num1 << " " << num2 << " " << num3 << " " << num4 << std::endl;
 }
