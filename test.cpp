@@ -3,6 +3,7 @@
                     // of the string library - not in the c++ standard - compiler specific
 
 int main() {
+    /*
     std::cout << "Number1" << std::endl;
     std::cout << "Number2\n";
     std::cout << "Number3" << std::endl;
@@ -42,5 +43,8 @@ int main() {
 
     std::cout << num5 << " " << num6 << std::endl;
     std::cout << "Space occupied by integers: " << sizeof(num5) << std::endl;
+    */
     std::cout << "Space occupied by bool: " << sizeof(bool) << std::endl;
+    std::cout << "Space occupied by short and long int: " << sizeof(short int) << " "
+              << sizeof(long int) << std::endl;
 }
