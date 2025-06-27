@@ -71,7 +71,7 @@ int main() {
     float number1{1.082328293f}; // precision for float: 7, double: 15
     std::setprecision(20);       // control precision from std::cout
     std::cout << "Floating point number: " << number1 << std::endl;
-    */
+
 
     bool boo1{true};
     std::cout << boo1 << std::endl; // displays output in cout as 1/0 by default
@@ -88,4 +88,21 @@ int main() {
     std::cout << "Double typed variable: " << vard << "\n";
     std::cout << "Sizes of auto typed double and double: " << sizeof(var) << " " << sizeof(vard)
               << "\n";
+    */
+
+    std::cout << std::setw(15) << "Last name" << std::setw(10) << "First name" << std::setw(5)
+              << "Age" << std::endl;
+    std::cout << std::setw(15) << "Daniel" << std::setw(10) << "Gray" << std::setw(5)
+              << "25" // formatting cout output
+              << std::endl;
+    std::cout << std::setw(15) << "Stanley" << std::setw(10) << "Woods" << std::setw(5) << "33"
+              << std::endl;
+    std::cout << std::setw(15) << "Jordan" << std::setw(10) << "Parker" << std::setw(5) << "45"
+              << std::endl;
+    std::cout << std::setw(15) << "Joe" << std::setw(10) << "Ball" << std::setw(5) << "21"
+              << std::endl;
+    std::cout << std::setw(15) << "Josh" << std::setw(10) << "Carr" << std::setw(5) << "27"
+              << std::endl;
+    std::cout << std::setw(15) << "Izaiah" << std::setw(10) << "Robinson" << std::setw(5) << "29"
+              << std::endl;
 }
