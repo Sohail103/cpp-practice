@@ -126,4 +126,15 @@ int main() {
 
     std::cout << "log base e (54.59): " << std::log(54.59) << std::endl;
     std::cout << "log base 10 (10000): " << std::log10(10000) << std::endl;
+
+    // You cannot do arithmetic operations on integers that are less than 4 bytes long (char and
+    // short int) - compiler converts short int to int if doing arithmetic operations
+
+    short int si1{12};
+    short int si2{10};
+    auto sum12 = si1 + si2;
+    std::cout << "Size of si1 and si2: " << sizeof(si1) << " " << sizeof(si2) << " "
+              << "\nSize of sum: " << sizeof(sum12)
+              << std::endl; // compiler set sum12 to int and typecasted si1 and si2 into ints before
+                            // adding
 }
