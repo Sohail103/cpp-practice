@@ -118,4 +118,8 @@ int main() {
               << std::numeric_limits<int>::max() << std::endl;
     std::cout << "The range for long is from " << std::numeric_limits<long>::min() << " to "
               << std::numeric_limits<long>::max() << std::endl;
+    std::cout << "min - max for double is from " << std::numeric_limits<double>::min() << "to "
+              << std::numeric_limits<double>::max() << std::endl;
+    std::cout << "lowest - max for double is from " << std::numeric_limits<double>::lowest()
+              << "to " << std::numeric_limits<double>::max() << std::endl;
 }
