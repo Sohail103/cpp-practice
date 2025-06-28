@@ -3,6 +3,7 @@
                     // of the string library - not in the c++ standard - compiler specific
 
 #include <iomanip> // lets you set the precision of floating point numbers
+#include <limits> // lets you check the min, max or lowest value of a datatype (float, int, short, etc)
 
 int main() {
     /*
@@ -110,4 +111,11 @@ int main() {
     std::cout << std::scientific << 14.23
               << std::endl; // to print floating point values in scientific notation
     std::cout.unsetf(std::ios::scientific | std::ios::fixed); // to reset to default
+
+    std::cout << "The range for short is from " << std::numeric_limits<short>::min() << " to "
+              << std::numeric_limits<short>::max() << std::endl;
+    std::cout << "The range for int is from " << std::numeric_limits<int>::min() << " to "
+              << std::numeric_limits<int>::max() << std::endl;
+    std::cout << "The range for long is from " << std::numeric_limits<long>::min() << " to "
+              << std::numeric_limits<long>::max() << std::endl;
 }
