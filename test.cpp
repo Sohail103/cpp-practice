@@ -2,6 +2,7 @@
 #include <string>   // implementation for iostream automatically includes a part
                     // of the string library - not in the c++ standard - compiler specific
 
+#include <cmath>
 #include <iomanip> // lets you set the precision of floating point numbers
 #include <limits> // lets you check the min, max or lowest value of a datatype (float, int, short, etc)
 
@@ -122,4 +123,6 @@ int main() {
               << std::numeric_limits<double>::max() << std::endl;
     std::cout << "lowest - max for double is from " << std::numeric_limits<double>::lowest()
               << "to " << std::numeric_limits<double>::max() << std::endl;
+
+    std::cout << "log base e (54.59): " << std::log(54.59) << std::endl;
 }
