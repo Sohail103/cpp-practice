@@ -125,4 +125,5 @@ int main() {
               << "to " << std::numeric_limits<double>::max() << std::endl;
 
     std::cout << "log base e (54.59): " << std::log(54.59) << std::endl;
+    std::cout << "log base 10 (10000): " << std::log10(10000) << std::endl;
 }
