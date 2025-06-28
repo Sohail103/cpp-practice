@@ -88,7 +88,7 @@ int main() {
     std::cout << "Double typed variable: " << vard << "\n";
     std::cout << "Sizes of auto typed double and double: " << sizeof(var) << " " << sizeof(vard)
               << "\n";
-    */
+
 
     std::cout << std::setw(15) << "Last name" << std::setw(10) << "First name" << std::setw(5)
               << "Age" << std::endl;
@@ -105,4 +105,9 @@ int main() {
               << std::endl;
     std::cout << std::setw(15) << "Izaiah" << std::setw(10) << "Robinson" << std::setw(5) << "29"
               << std::endl;
+    */
+
+    std::cout << std::scientific << 14.23
+              << std::endl; // to print floating point values in scientific notation
+    std::cout.unsetf(std::ios::scientific | std::ios::fixed); // to reset to default
 }
