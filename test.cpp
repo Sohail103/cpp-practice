@@ -140,7 +140,14 @@ int main() {
     */
 
     int scores[] {10, 12, 15, 11, 18, 17, 22, 23, 24};
-    std::cout << "scores size: " << std::size(scores) << std::endl;
-    for(size_t i {0}; i<std::size(scores); i++)
+    /*
+    std::cout << "scores size: " << std::size(scores) << std::endl; 
+    for(size_t i {0}; i<std::size(scores); i++)                      // preserves index info
         std::cout << "scores[" << i << "] = " << scores[i] << std::endl;
+    */
+
+    for(auto val: scores)           // takes one element from the array at a time
+        std::cout << val << std::endl;  // does not preserve information about indexes
+
+    
 }
