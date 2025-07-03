@@ -107,7 +107,7 @@ int main() {
               << std::endl;
     std::cout << std::setw(15) << "Izaiah" << std::setw(10) << "Robinson" << std::setw(5) << "29"
               << std::endl;
-    */
+    
 
     std::cout << std::scientific << 14.23
               << std::endl; // to print floating point values in scientific notation
@@ -137,4 +137,10 @@ int main() {
               << "\nSize of sum: " << sizeof(sum12)
               << std::endl; // compiler set sum12 to int and typecasted si1 and si2 into ints before
                             // adding
+    */
+
+    int scores[] {10, 12, 15, 11, 18, 17, 22, 23, 24};
+    std::cout << "scores size: " << std::size(scores) << std::endl;
+    for(size_t i {0}; i<std::size(scores); i++)
+        std::cout << "scores[" << i << "] = " << scores[i] << std::endl;
 }
