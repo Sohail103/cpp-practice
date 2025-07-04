@@ -150,5 +150,11 @@ int main() {
         std::cout << val << std::endl;  // does not preserve information about indexes
 */
     const char *message {"Hello"};
-    std::cout << *message << std::endl;    
+    std::cout << *message << std::endl; 
+    
+    int *p_num1 {new int (22)};         // allocating memory dynamically to a pointer
+    int *p_num2 {new int {23}};
+
+    std::cout << "p_num1: " << *p_num1 << std::endl;
+    std::cout << "p_num2L " << *p_num2 << std::endl;
 }
