@@ -171,4 +171,9 @@ int main() {
     {
         std::cerr << e.what() << '\n';
     }
+    {
+        // int *p_number1{new int{15}}; // leads to memory leak because variable p_number1 dies out
+        //  after its local scope is exited - memory leaks in nested scopes
+    }
+    return 0;
 }
