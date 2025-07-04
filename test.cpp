@@ -107,7 +107,7 @@ int main() {
               << std::endl;
     std::cout << std::setw(15) << "Izaiah" << std::setw(10) << "Robinson" << std::setw(5) << "29"
               << std::endl;
-    
+
 
     std::cout << std::scientific << 14.23
               << std::endl; // to print floating point values in scientific notation
@@ -137,40 +137,38 @@ int main() {
               << "\nSize of sum: " << sizeof(sum12)
               << std::endl; // compiler set sum12 to int and typecasted si1 and si2 into ints before
                             // adding
-    
+
 
     int scores[] {10, 12, 15, 11, 18, 17, 22, 23, 24};
-    
-    std::cout << "scores size: " << std::size(scores) << std::endl; 
+
+    std::cout << "scores size: " << std::size(scores) << std::endl;
     for(size_t i {0}; i<std::size(scores); i++)                      // preserves index info
         std::cout << "scores[" << i << "] = " << scores[i] << std::endl;
-    
+
 
     for(auto val: scores)           // takes one element from the array at a time
         std::cout << val << std::endl;  // does not preserve information about indexes
 */
-    const char *message {"Hello"};
-    std::cout << *message << std::endl; 
-    
-    int *p_num1 {new int (22)};         // allocating memory dynamically to a pointer
-    int *p_num2 {new(std::nothrow) int {23}}; // doesnt throw exception when new operator fails
+    const char *message{"Hello"};
+    std::cout << *message << std::endl;
+
+    int *p_num1{new int(22)};                // allocating memory dynamically to a pointer
+    int *p_num2{new (std::nothrow) int{23}}; // doesnt throw exception when new operator fails
+                                             // simply returns nullptr if new failed
 
     std::cout << "p_num1: " << *p_num1 << std::endl;
     std::cout << "p_num2L " << *p_num2 << std::endl;
 
     delete p_num1;
     delete p_num2;
-    p_num1 = nullptr;       // avoid calling delete twice on a pointer - undefined behavior
-    p_num2 = nullptr;       // also avoid having 2 pointers pointing to the same location and then
-                            // deleting one of them so the other also becomes invalid - 
-                            // instead keep one master pointer and all other are slaves if necessary
-    try
-    {
+    p_num1 = nullptr; // avoid calling delete twice on a pointer - undefined behavior
+    p_num2 = nullptr; // also avoid having 2 pointers pointing to the same location and then
+                      // deleting one of them so the other also becomes invalid -
+                      // instead keep one master pointer and all other are slaves if necessary
+    try {
         /* code */
-    }
-    catch(const std::exception& e)      // try catch block
+    } catch (const std::exception &e) // try catch block
     {
         std::cerr << e.what() << '\n';
     }
-    
 }
