@@ -157,4 +157,9 @@ int main() {
 
     std::cout << "p_num1: " << *p_num1 << std::endl;
     std::cout << "p_num2L " << *p_num2 << std::endl;
+
+    delete p_num1;
+    delete p_num2;
+    p_num1 = nullptr;
+    p_num2 = nullptr;
 }
