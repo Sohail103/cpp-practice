@@ -160,6 +160,6 @@ int main() {
 
     delete p_num1;
     delete p_num2;
-    p_num1 = nullptr;
+    p_num1 = nullptr;       // avoid calling delete twice on a pointer - undefined behavior
     p_num2 = nullptr;
 }
