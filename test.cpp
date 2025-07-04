@@ -161,5 +161,16 @@ int main() {
     delete p_num1;
     delete p_num2;
     p_num1 = nullptr;       // avoid calling delete twice on a pointer - undefined behavior
-    p_num2 = nullptr;
+    p_num2 = nullptr;       // also avoid having 2 pointers pointing to the same location and then
+                            // deleting one of them so the other also becomes invalid - 
+                            // instead keep one master pointer and all other are slaves if necessary
+    try
+    {
+        /* code */
+    }
+    catch(const std::exception& e)      // try catch block
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }
