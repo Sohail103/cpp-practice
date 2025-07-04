@@ -137,19 +137,18 @@ int main() {
               << "\nSize of sum: " << sizeof(sum12)
               << std::endl; // compiler set sum12 to int and typecasted si1 and si2 into ints before
                             // adding
-    */
+    
 
     int scores[] {10, 12, 15, 11, 18, 17, 22, 23, 24};
-    /*
+    
     std::cout << "scores size: " << std::size(scores) << std::endl; 
     for(size_t i {0}; i<std::size(scores); i++)                      // preserves index info
         std::cout << "scores[" << i << "] = " << scores[i] << std::endl;
-    */
+    
 
     for(auto val: scores)           // takes one element from the array at a time
         std::cout << val << std::endl;  // does not preserve information about indexes
-
-    char message[] {"Hello"};
-    std::cout << message << std::endl;
-    
+*/
+    const char *message {"Hello"};
+    std::cout << *message << std::endl;    
 }
