@@ -153,7 +153,7 @@ int main() {
     std::cout << *message << std::endl; 
     
     int *p_num1 {new int (22)};         // allocating memory dynamically to a pointer
-    int *p_num2 {new int {23}};
+    int *p_num2 {new(std::nothrow) int {23}}; // doesnt throw exception when new operator fails
 
     std::cout << "p_num1: " << *p_num1 << std::endl;
     std::cout << "p_num2L " << *p_num2 << std::endl;
