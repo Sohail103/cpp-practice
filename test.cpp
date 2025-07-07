@@ -191,6 +191,22 @@ int main() {
         p_scores1 = nullptr;
 
         */
+    /*
+    // Dynamic vs static arrays
+    int scores_stack[10]{1, 2, 3, 4, 5}; // static array - size is const
+    // std::cout << std::size(scores_stack) << std::endl; // displays size of the static array
 
-    return 0;
+    int *scores_heap = new int[10]{1, 2, 3, 4, 5}; // dynamic array - size is not constant
+    // std::cout << std::size(scores_heap) << std::endl;   // cannot print size of dynamic array
+
+    for (auto val : scores_stack)
+        std::cout << val << " "; // works with static arrays
+    std::cout << "\n";
+
+    for (auto val : scores_heap)  // doesnt work with dynamic arrays
+        std::cout << val << " ";
+    std::cout << "\n";
+    */
+
+        return 0;
 }
