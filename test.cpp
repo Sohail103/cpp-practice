@@ -218,6 +218,8 @@ int main() {
               << " and reference to int value: " << reference_to_int_value1 << std::endl;
     std::cout << "address of int value: " << &int_value
               << " and address of reference: " << &reference_to_int_value1 << std::endl;
+    // references are somewhat like const pointers
+    // they cannot be made to reference another variable - only the one they were initialized with
 
     return 0;
 }
