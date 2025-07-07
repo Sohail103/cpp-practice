@@ -149,31 +149,43 @@ int main() {
     for(auto val: scores)           // takes one element from the array at a time
         std::cout << val << std::endl;  // does not preserve information about indexes
 */
-    const char *message{"Hello"};
-    std::cout << *message << std::endl;
+    /*
+        const char *message{"Hello"};
+        std::cout << *message << std::endl;
 
-    int *p_num1{new int(22)};                // allocating memory dynamically to a pointer
-    int *p_num2{new (std::nothrow) int{23}}; // doesnt throw exception when new operator fails
-                                             // simply returns nullptr if new failed
+        int *p_num1{new int(22)};                // allocating memory dynamically to a pointer
+        int *p_num2{new (std::nothrow) int{23}}; // doesnt throw exception when new operator fails
+                                                 // simply returns nullptr if new failed
 
-    std::cout << "p_num1: " << *p_num1 << std::endl;
-    std::cout << "p_num2L " << *p_num2 << std::endl;
+        std::cout << "p_num1: " << *p_num1 << std::endl;
+        std::cout << "p_num2L " << *p_num2 << std::endl;
 
-    delete p_num1;
-    delete p_num2;
-    p_num1 = nullptr; // avoid calling delete twice on a pointer - undefined behavior
-    p_num2 = nullptr; // also avoid having 2 pointers pointing to the same location and then
-                      // deleting one of them so the other also becomes invalid -
-                      // instead keep one master pointer and all other are slaves if necessary
-    try {
-        /* code */
-    } catch (const std::exception &e) // try catch block
-    {
-        std::cerr << e.what() << '\n';
-    }
-    {
-        // int *p_number1{new int{15}}; // leads to memory leak because variable p_number1 dies out
-        //  after its local scope is exited - memory leaks in nested scopes
-    } // local variable p_number is gone after its scope is exited
+        delete p_num1;
+        delete p_num2;
+        p_num1 = nullptr; // avoid calling delete twice on a pointer - undefined behavior
+        p_num2 = nullptr; // also avoid having 2 pointers pointing to the same location and then
+                          // deleting one of them so the other also becomes invalid -
+                          // instead keep one master pointer and all other are slaves if necessary
+        try {
+            // code
+        } catch (const std::exception &e) // try catch block
+        {
+            std::cerr << e.what() << '\n';
+        }
+        {
+            // int *p_number1{new int{15}}; // leads to memory leak because variable p_number1 dies
+       out
+            //  after its local scope is exited - memory leaks in nested scopes
+        } // local variable p_number is gone after its scope is exited
+
+        int *p_scores0{
+            new (std::nothrow) int[5]{}}; // all values initialized to 0 - dynamically allocated
+       arays int *p_scores1{new (std::nothrow) int[5]{1, 2, 3, 4, 5}}; // values initialized
+
+        std::cout << *p_scores0 << std::endl;
+        std::cout << *p_scores1 << std::endl;
+
+        */
+
     return 0;
 }
