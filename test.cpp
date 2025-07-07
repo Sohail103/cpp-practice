@@ -185,6 +185,11 @@ int main() {
         std::cout << *p_scores0 << std::endl;
         std::cout << *p_scores1 << std::endl;
 
+        delete[] p_scores0;
+        p_scores0 = nullptr;
+        delete[] p_scores1;
+        p_scores1 = nullptr;
+
         */
 
     return 0;
