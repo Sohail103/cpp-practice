@@ -2,6 +2,7 @@
 #include <string>   // implementation for iostream automatically includes a part
                     // of the string library - not in the c++ standard - compiler specific
 
+#include <cctype> // for strings and string manipulation
 #include <cmath>
 #include <iomanip> // lets you set the precision of floating point numbers
 #include <limits> // lets you check the min, max or lowest value of a datatype (float, int, short, etc)
