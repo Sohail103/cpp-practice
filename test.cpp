@@ -8,6 +8,14 @@
 #include <iomanip> // lets you set the precision of floating point numbers
 #include <limits> // lets you check the min, max or lowest value of a datatype (float, int, short, etc)
 
+// to make a function change multiple outputs, pass values by reference and change within function
+void max_str(const std::string &input1, const std::string input2, std::string &output) {
+    if (input1 > input2)
+        output = input1;
+    else
+        output = input2;
+}
+
 int main() {
     /*
     std::cout << "Number1" << std::endl;
