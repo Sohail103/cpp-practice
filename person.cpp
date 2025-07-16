@@ -1,3 +1,5 @@
+#ifndef PERSON_H
+#define PERSON_H
 #include "person.h"
 
 Person::Person() = default;
@@ -17,3 +19,4 @@ std::ostream &operator<<(std::ostream &out, Person &p) {
     out << "Name: " << p.getname() << ", Age: " << p.getage() << "\n";
     return out;
 }
+#endif
