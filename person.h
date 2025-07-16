@@ -7,10 +7,12 @@ class Person {
     Person();
     Person(std::string_view name, int age);
     ~Person();
+    std::string_view getname();
+    int *getage();
 
     friend std::ostream &operator<<(std::ostream &out, Person p);
 
   protected:
     std::string name;
     int *age;
-}
+};
