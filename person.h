@@ -10,7 +10,7 @@ class Person {
     std::string_view getname();
     int *getage();
 
-    friend std::ostream &operator<<(std::ostream &out, Person p);
+    friend std::ostream &operator<<(std::ostream &out, Person &p);
 
   protected:
     std::string name;
