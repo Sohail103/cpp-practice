@@ -7,7 +7,7 @@
 class Player : public Person {
   public:
     Player();
-    Player(int gamenum);
+    Player(std::string_view name, int age, int gamenum);
     ~Player();
 
     int getgamenum();
