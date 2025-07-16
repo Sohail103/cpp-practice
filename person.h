@@ -12,7 +12,7 @@ class Person {
 
     friend std::ostream &operator<<(std::ostream &out, Person &p);
 
-  protected:
+  private:
     std::string name;
     int *age;
 };

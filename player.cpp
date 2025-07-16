@@ -2,10 +2,10 @@
 
 Player::Player() = default;
 
-Player::Player(std::string_view name, int age, int gamenum) {
-    this->name = name;
-    this->age = new int{age};
-    this->gamenum = gamenum;
+Player::Player(std::string_view name, int age, int gamenum) : Person(name, age), gamenum(gamenum) {
+    // this->name = name;
+    // this->age = new int{age};
+    // this->gamenum = gamenum;
 }
 
 Player::~Player() = default;
