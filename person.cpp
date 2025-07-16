@@ -9,4 +9,8 @@ Person::Person(std::string_view name, int age) {
 
 Person::~Person() = default;
 
-std::ostream &operator<<(std::ostream &out, Person p) {}
+std::string_view Person::getname() { return this->name; }
+
+int *Person::getage() { return this->age; }
+
+std::ostream &operator<<(std::ostream &out, Person &p) { out << p.name }
