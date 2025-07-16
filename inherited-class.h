@@ -9,6 +9,11 @@ class Player : public Person {
     Player();
     Player(int gamenum);
     ~Player();
+
+    int getgamenum();
+
+  private:
+    int gamenum;
 };
 
 #endif
