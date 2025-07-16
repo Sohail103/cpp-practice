@@ -2,9 +2,13 @@
 #include "person.h"
 #endif
 
-#ifndef INHERITED - CLASS_H
-#define INHERITED -CLASS_H
-
-class Player : public Person {}
+#ifndef PERSON_H
+#define PERSON_H
+class Player : public Person {
+  public:
+    Player();
+    Player(int gamenum);
+    ~Player();
+};
 
 #endif
