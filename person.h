@@ -12,8 +12,6 @@ class Person {
 
     friend std::ostream &operator<<(std::ostream &out, Person &p);
 
-    Person(Player p);
-
   private:
     std::string name;
     int *age;
