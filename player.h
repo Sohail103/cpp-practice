@@ -12,6 +12,8 @@ class Player : public Person {
 
     int getgamenum();
 
+    Player(const Player &p);
+
     friend std::ostream &operator<<(std::ostream &out, Player &p);
 
   private:

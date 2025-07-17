@@ -12,6 +12,10 @@ Player::~Player() = default;
 
 int Player::getgamenum() { return gamenum; }
 
+Player::Player(const Player &p) : Person(p), gamenum(p.gamenum) {
+    std::cout << "copy constructor called\n";
+}
+
 std::ostream &operator<<(std::ostream &out, Player &p) {
     out << "Name: " << p.getname() << ", Age: " << *(p.getage())
         << ", Game number: " << p.getgamenum() << "\n";
