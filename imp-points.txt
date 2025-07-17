@@ -1,0 +1,8 @@
+If you create a dynamically allocated inherited class object using a pointer for the base class, then call delete on the base class pointer pointing to the inherited object - only the destructor for the base class part of the object will be called - this is why we need virtual destructors
+
+destructors are called in the order of most inherited->base class
+constructors are called in the order of base class->inherited classes
+
+marking an inherited class as final - no other classes can inherit from it
+marking a virtual function as final - no more overriding in inheriting classes
+marking a virtual function as override - explicitly stating that the virtual function is an override 
