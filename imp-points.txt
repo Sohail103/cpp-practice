@@ -6,3 +6,8 @@ constructors are called in the order of base class->inherited classes
 marking an inherited class as final - no other classes can inherit from it
 marking a virtual function as final - no more overriding in inheriting classes
 marking a virtual function as override - explicitly stating that the virtual function is an override 
+
+default arguments in virtual functions are dangerous because - 
+default arguments are statically resolved by the compiler whereas virtual functions (polymorphism) are dynamically resolved during run time
+suppose you make an object of a derived class using a pointer for a base class - the default arguments used will be of the base class but the virtual function used will be of the derived class
+therefore - default arguments depend on the pointer type (base class pointer or derived class pointer) whereas which virtual function to use is resolved at run time
