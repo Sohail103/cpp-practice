@@ -11,3 +11,10 @@ default arguments in virtual functions are dangerous because -
 default arguments are statically resolved by the compiler whereas virtual functions (polymorphism) are dynamically resolved during run time
 suppose you make an object of a derived class using a pointer for a base class - the default arguments used will be of the base class but the virtual function used will be of the derived class
 therefore - default arguments depend on the pointer type (base class pointer or derived class pointer) whereas which virtual function to use is resolved at run time
+
+copy constructors are called even when you try to make a collection (array) of objects of a class - also when passing an object to a function as a parameter
+
+if you use a base class pointer to represent an inherited class object - you can only use polymorphic or virtual functions
+to use all the functions of the derived class object, use a dynamic cast
+
+if you use a base class pointer to represent an inherited class object - calling delete *baseclassptr will only call the destructor for the base class if your destructors are not marked as virtual - may lead to memory leaks if constructors for your objects dynamically allocate memory
