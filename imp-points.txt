@@ -18,3 +18,5 @@ if you use a base class pointer to represent an inherited class object - you can
 to use all the functions of the derived class object, use a dynamic cast
 
 if you use a base class pointer to represent an inherited class object - calling delete *baseclassptr will only call the destructor for the base class if your destructors are not marked as virtual - may lead to memory leaks if constructors for your objects dynamically allocate memory
+
+can cast a base class pointer to a derived class pointer using the dynamic_cast<derived_class_type*>(base_class_ptr);
