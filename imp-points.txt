@@ -24,4 +24,6 @@ can cast a base class pointer to a derived class pointer using the dynamic_cast<
 
 no such thing as a null reference - cant do pointer checks like in previous case - gives undefined behavior
 
-can dynamic cast references the same way (Eg: Feline& feline_ref {dynamic_cast<Feline&>(animal_ref)};)
+can dynamic cast references the same way (Eg: Feline& feline_ref {dynamic_cast<Feline&>(animal_ref)};) - only issue being that you can't check for null references to see if the dynamic cast passed or failed - therefore prefer pointers
+
+can dynamically cast a base class reference to an inherited class pointer also - best way to do it if you have a reference - this way you can even check if the cast was successful or not 
