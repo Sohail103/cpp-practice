@@ -93,6 +93,10 @@ unique pointers - scoped pointers - memory is freed when the pointer goes out of
 but ```std::unique_ptr<Entity> entity(new Entity());``` will also compile correctly - main reason not to do this is exception safety
 
 ```std::shared_ptr<Entity> sharedEntity = std::make_shared<Entity>();``` - to declare a shared pointer - implemented using reference counting - delete memory when reference count becomes 0
-but ```std::shared_ptr<Entity> sharedEntity (new Entity());``` would also compile correctly - dont do this because the shared pointer has to allocate another block of memory called the control block where it stores the reference count. If you do new Entity() yourself and then the shared pointer separately allocated the control block it is less efficient than just letting it allocate both blocks together 
+but ```std::shared_ptr<Entity> sharedEntity (new Entity());``` would also compile correctly - dont do this because the shared pointer has to allocate another block of memory called the control block where it stores the reference count. If you do new Entity() yourself and then the shared pointer separately allocated the control block it is less efficient than just letting it allocate both blocks together
+can copy a shared pointer by doing: ```std::shared_ptr<Entity> e0 = sharedEntity;```
+
+a weak pointer can take on a value from a shared pointer without increasing the reference count.
+can be declared like ```std::weak_ptr<Entity> weakEntity = sharedEntity;``` - good for cases where you dont want to take ownership of the data - lets you check whether a memory location is still valid without trying to keep it valid
 
 Can call object functions on this pointer like how you would with a regular pointer, eg: ```entity->Print();```
