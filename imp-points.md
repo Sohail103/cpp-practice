@@ -88,3 +88,8 @@ In a complete inheritance hierarchy, the base class (eg: animals) can inherit fr
 
 unique pointers - scoped pointers - memory is freed when the pointer goes out of scope - called unique pointers because you cant have two unique pointers
 - this is because if you have 2 unique pointers and both are pointing to the same memory location and one goes out of scope, it frees that allocated memory and now the 2nd unique pointer is not pointing to valid memory
+
+```std::unique_ptr<Entity> entity = std::make_unique<Entity>();``` - to declare a unique pointer
+```std::shared_ptr<Entity> sharedEntity = std::make_shared<Entity>();``` - to declare a shared pointer
+
+Can call object functions on this pointer like how you would with a regular pointer, eg: ```entity->Print();```
