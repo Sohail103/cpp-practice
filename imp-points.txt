@@ -29,4 +29,5 @@ can dynamic cast references the same way (Eg: Feline& feline_ref {dynamic_cast<F
 can dynamically cast a base class reference to an inherited class pointer also - best way to do it if you have a reference - this way you can even check if the cast was successful or not
 
 calling virtual functions from constructors or destructors gives static binding results - this is because the base constructor is called first before the inherited part of the object is built so it calls whatever version of the virtual function is available (the base class object method which therefore leads to static binding)
-- instead - first build the object, then call the virtual method on the object - dynamic binding results
+- instead - first build the object, then call the virtual method on the object if the virtual method was supposed to act as a constructor and set up some values - dynamic binding results
+- instead of calling virtual functions from the destructor - call the virtual function before the destructor is called for the object - dynamic binding results
