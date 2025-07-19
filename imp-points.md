@@ -83,3 +83,6 @@ class Point: public StreamInsertable{
 ```
 
 In a complete inheritance hierarchy, the base class (eg: animals) can inherit from the interface StreamInsertable and then all inherited classes from animals can define their implementation of the ```stream_insert``` function and makes all objects printable to cout - good because now we dont have to define overloads for operator<< everytime
+
+unique pointers - scoped pointers - memory is freed when the pointer goes out of scope - called unique pointers because you cant have two unique pointers
+- this is because if you have 2 unique pointers and both are pointing to the same memory location and one goes out of scope, it frees that allocated memory and now the 2nd unique pointer is not pointing to valid memory
