@@ -57,7 +57,10 @@ Useful interfaces:
 - StreamInsertable is an abstract class with virtual function specified like this:
 ```
 class StreamInsertable{
-    friend std::ostream& operator<<(std::ostream& out, const StreamInsertable& operand);
+    friend std::ostream& operator<<(std::ostream& out, const StreamInsertable& operand) {
+        operand.stream_insert(out);
+        return out;
+    }
   public:
     virtual void stream_insert(std::ostream& out) const = 0;
 };
