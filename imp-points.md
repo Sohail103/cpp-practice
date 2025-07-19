@@ -81,3 +81,5 @@ class Point: public StreamInsertable{
     double m_y;
 };
 ```
+
+In a complete inheritance hierarchy, the base class (eg: animals) can inherit from the interface StreamInsertable and then all inherited classes from animals can define their implementation of the ```stream_insert``` function and makes all objects printable to cout - good because now we dont have to define overloads for operator<< everytime
