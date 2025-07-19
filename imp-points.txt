@@ -21,3 +21,7 @@ if you use a base class pointer to represent an inherited class object - calling
 
 can cast a base class pointer to a derived class pointer using the dynamic_cast<derived_class_type*>(base_class_ptr); - always check if cast was successful before using the pointer - the dynamic_cast returns a nullptr if it failed
 - this can be used to call non-virtual functions of inherited classes through a base class pointer
+
+no such thing as a null reference - cant do pointer checks like in previous case - gives undefined behavior
+
+can dynamic cast references the same way (Eg: Feline& feline_ref {dynamic_cast<Feline&>(animal_ref)};)
