@@ -1,3 +1,5 @@
+# OOP Notes for C++
+
 If you create a dynamically allocated inherited class object using a pointer for the base class, then call delete on the base class pointer pointing to the inherited object - only the destructor for the base class part of the object will be called - this is why we need virtual destructors
 
 destructors are called in the order of most inherited->base class
@@ -19,7 +21,7 @@ to use all the functions of the derived class object, use a dynamic cast
 
 if you use a base class pointer to represent an inherited class object - calling delete *baseclassptr will only call the destructor for the base class if your destructors are not marked as virtual - may lead to memory leaks if constructors for your objects dynamically allocate memory
 
-can cast a base class pointer to a derived class pointer using the dynamic_cast<derived_class_type*>(base_class_ptr); - always check if cast was successful before using the pointer - the dynamic_cast returns a nullptr if it failed
+can cast a base class pointer to a derived class pointer using the ```dynamic_cast<derived_class_type*>(base_class_ptr);``` - always check if cast was successful before using the pointer - the dynamic_cast returns a nullptr if it failed
 - this can be used to call non-virtual functions of inherited classes through a base class pointer
 
 no such thing as a null reference - cant do pointer checks like in previous case - gives undefined behavior
@@ -34,4 +36,6 @@ calling virtual functions from constructors or destructors gives static binding 
 
 pure virtual functions - example shape-> circle
                                       |-> rectangle
-and you have functions to calculate area and perimeter in the base shape class - but no implementation to find the area and perimeter in the base class - the functions are meant to be overriden by the base class - called a purely virtual method
+and you have functions to calculate area and perimeter in the base shape class - but no implementation to find the area and perimeter in the base class - the functions are meant to be overriden by the base class - called a purely virtual method 
+- dont have to put in implementations for these functions in the base class - compiler will not look for the base class implementation.
+To declare pure virtual functions: ```virtual double perimeter() const = 0;```
