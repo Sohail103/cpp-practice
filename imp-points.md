@@ -37,5 +37,13 @@ calling virtual functions from constructors or destructors gives static binding 
 pure virtual functions - example shape-> circle
                                       |-> rectangle
 and you have functions to calculate area and perimeter in the base shape class - but no implementation to find the area and perimeter in the base class - the functions are meant to be overriden by the base class - called a purely virtual method 
-- dont have to put in implementations for these functions in the base class - compiler will not look for the base class implementation.
+- dont have to put in implementations for these functions in the base class - compiler will not look for the base class implementation 
 To declare pure virtual functions: ```virtual double perimeter() const = 0;```
+If you're inheriting from an abstract class make sure you explicitly override every single pure virtual method even if youre not using it in that specific inherited class otherwise the inherited class will become an abstract class
+
+once you set up even 1 purely virtual function in the class - the class becomes an abstract class - cant create objects of this class anymore - dont have to put in implementations for the inheriting downstream classes
+- can still use base pointers to manage derived objects
+- derived classes must explicitly override all the pure virtual functions from the abstract parent class - otherwise the derived classes themselves become abstract
+- cant call the pure virtual functions from the constructor of the abstract class
+
+```typeid(*base_class_ptr).name()``` returns the name of the inherited class (dynamically)
