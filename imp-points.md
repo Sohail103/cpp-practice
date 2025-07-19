@@ -47,3 +47,34 @@ once you set up even 1 purely virtual function in the class - the class becomes 
 - cant call the pure virtual functions from the constructor of the abstract class
 
 ```typeid(*base_class_ptr).name()``` returns the name of the inherited class (dynamically)
+
+Abstract classes as interfaces:
+- an interface can be modelled as an abstract class with pure virtual functions and no member variables
+- an interface is a specification of something that will be fully implemented in a derived class but the specification itself resides in the abstract class
+
+Useful interfaces:
+- StreamInsertable Interface - inserts data into std::cout streams 
+- StreamInsertable is an abstract class with virtual function specified like this:
+```
+class StreamInsertable{
+    friend std::ostream& operator<<(std::ostream& out, const StreamInsertable& operand);
+  public:
+    virtual void stream_insert(std::ostream& out) const = 0;
+};
+```
+- all other classes inherit from class StreamInsertable and define their implementation of the ```virtual void stream_insert(std::ostream& out)``` function
+
+- Example Point class that inherits from he interface StreamInsertable:
+```
+class Point: public StreamInsertable{
+  public:
+    Point() = default;
+    Point(double x, double y): m_x(x), x_y(y) {}
+    virtual void stream_insert (std::ostream& out) const override {
+    out << "Point = " << m_x << ", " << m_y << "\n";
+    }
+  private:
+    double m_x;
+    double m_y;
+};
+```
